@@ -44,4 +44,4 @@ jobs:
       run: |
         echo "${{ secrets.KUBECONFIG }}" > kubeconfig
         export KUBECONFIG=kubeconfig
-        kubectl set image deployment/test-deploy test=nikhitha009/updatetest:latest --namespace=default
+        sudo kubectl set image deployment/test-deploy test=nikhitha009/updatetest:latest --namespace=default
