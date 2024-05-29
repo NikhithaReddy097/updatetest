@@ -43,5 +43,5 @@ jobs:
     - name: Deploy to k3s
       run: |
         echo "${{ secrets.KUBECONFIG }}" > kubeconfig
-        export KUBECONFIG=kubeconfig
+        export KUBECONFIG=$(pwd)/kubeconfig
         sudo kubectl set image deployment/test-deploy test=nikhitha009/updatetest:latest --namespace=default
